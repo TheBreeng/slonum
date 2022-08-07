@@ -1,1 +1,1 @@
-https://github.com/gitname/react-gh-pages
+https://TheBreeng.github.io/slonum
