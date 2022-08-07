@@ -1,0 +1,7 @@
+@import '../../scss/variables.scss';
+
+.FAQ {
+    .FAQItem:first-of-type {
+        border-top: 2px solid $additionalFontColor;
+    }
+}

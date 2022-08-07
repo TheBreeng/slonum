@@ -1,0 +1,75 @@
+@import 'null.scss';
+@import 'fonts.scss';
+@import 'mixins.scss';
+@import 'variables.scss';
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: $mainFontColor;
+    font-family: $commonFont;
+    font-weight: 400;
+    background: $mainColor;
+    letter-spacing: 0.04em;
+}
+
+.wrapper {
+    padding: 100px 260px;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $mainFontColor;
+    font-family: $headersFont;
+    font-weight: 700;
+}
+h1 {
+    font-size: 55px;
+    line-height: 122%;
+}
+h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 60px;
+
+    span {
+        text-decoration: $additionalAccentColor wavy underline 2px;
+        text-underline-position: under;
+    }
+}
+
+button {
+    @include flex($jc: center);
+
+    border-radius: $borderRadius;
+    font-size: 20px;
+}
+.bigBtn {
+    min-width: 300px;
+    padding: 18px;
+    background: $mainAccentColor;
+    font-weight: 700;
+    color: $mainColor;
+    box-shadow: 0px 15px 30px rgba(25, 218, 140, 0.25);
+}
+.smallBtn {
+    min-width: 180px;
+    padding: 10px;
+    font-weight: 400;
+    border: 1px solid $mainFontColor;
+    color: $mainColor;
+    background: $additionalAccentColor;
+}
+
+.airplanes {
+    width: 170px;
+    height: 90px;
+}

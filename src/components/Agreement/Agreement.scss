@@ -1,0 +1,21 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/variables.scss';
+
+.Agreement {
+    @include flex($ai: flex-start, $jc: flex-start);
+
+    font-size: 15px;
+    color: $additionalFontColor;
+    text-align: left;
+    font-size: 15px;
+    line-height: 18px;
+
+    .Checkbox {
+        margin-right: 12px;
+    }
+
+    a {
+        color: $mainAccentColor;
+        text-decoration: underline !important;
+    }
+}

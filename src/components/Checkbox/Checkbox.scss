@@ -1,0 +1,30 @@
+@import '../../scss/variables.scss';
+
+.Checkbox {
+    width: 18px;
+    height: 18px;
+    border: 2px solid $mainAccentColor;
+    border-radius: 5px;
+    background: $mainColor;
+    cursor: pointer;
+
+    &__checked {
+        position: relative;
+        background: $mainAccentColor;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 1px;
+            top: 2px;
+            width: 12px;
+            height: 8px;
+            border-radius: 2px;
+            transform: rotate(-45deg);
+            border: {
+                left: 3px solid $mainColor;
+                bottom: 3px solid $mainColor;
+            }
+        }
+    }
+}

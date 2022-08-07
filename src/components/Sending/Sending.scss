@@ -1,0 +1,42 @@
+@import '../../scss/variables.scss';
+@import '../../scss/mixins.scss';
+
+.Sending {
+    padding: 100px 120px !important;
+
+    &__content {
+        @include flex($fd: column);
+
+        width: 1680px;
+        height: 373px;
+        background: url('../../img/sending/sendingBg.png') no-repeat;
+        background-size: contain;
+        color: $mainColor;
+        padding: 30px 405px 70px;
+        text-align: center;
+        line-height: 150%;
+        font-size: 18px;
+
+        h2 {
+            color: inherit;
+            margin: 0;
+        }
+
+        form {
+            @include flex;
+
+            button {
+                margin-left: 30px;
+            }
+        }
+
+        .Agreement {
+            align-self: flex-start;
+            color: #d6d7dd;
+
+            a {
+                color: $mainColor;
+            }
+        }
+    }
+}

@@ -1,0 +1,71 @@
+@import '../../scss/variables.scss';
+
+.Plan {
+    background: url('../../img/plan/sky.png') no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+
+    &__container {
+        background: url('../../img/plan/plan.png') no-repeat;
+        background-size: 100% 100%;
+        width: 1303px;
+        height: 448px;
+        position: relative;
+
+        P {
+            position: absolute;
+            color: $additionalFontColor;
+            font-size: 20px;
+            line-height: 24px;
+
+            &:first-child {
+                left: 115px;
+            }
+
+            &:nth-child(2) {
+                left: 555px;
+                top: 180px;
+            }
+
+            &:nth-child(3) {
+                right: 25px;
+                bottom: 25px;
+            }
+
+            a {
+                color: $mainAccentColor;
+                text-decoration: underline;
+            }
+        }
+
+        .paperAirplane {
+            position: absolute;
+            transform: rotate(45deg);
+            left: -110px;
+            top: -30px;
+        }
+        .airplaneTrackingAnimation {
+            animation: airplaneTrackingAnimation 3s 1s linear forwards;
+        }
+        @keyframes airplaneTrackingAnimation {
+            16% {
+                transform: translate(200px, 60px) rotate(45deg);
+            }
+            32% {
+                transform: translate(500px, 200px) rotate(55deg);
+            }
+            48% {
+                transform: translate(700px, 300px) rotate(55deg);
+            }
+            64% {
+                transform: translate(950px, 400px) rotate(50deg);
+            }
+            80% {
+                transform: translate(1200px, 450px) rotate(20deg);
+            }
+            100% {
+                transform: translate(1920px, 330px) rotate(10deg);
+            }
+        }
+    }
+}

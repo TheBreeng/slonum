@@ -1,0 +1,18 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/variables.scss';
+
+.Description {
+    @include flex($jc: center);
+
+    p {
+        width: 790px;
+        text-align: center;
+        font-size: 22px;
+        line-height: 150%;
+        letter-spacing: 0.05em;
+
+        span {
+            color: $mainAccentColor;
+        }
+    }
+}

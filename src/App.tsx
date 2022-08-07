@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Benefits from './components/Benefits/Benefits';
+import Description from './components/Description/Description';
+import Diploma from './components/Diploma/Diploma';
+import FAQ from './components/FAQ/FAQ';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import Plan from './components/Plan/Plan';
+import Request from './components/Request/Request';
+import Sending from './components/Sending/Sending';
+import './scss/App.scss';
+import 'animate.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Header />
+            <Description />
+            <Benefits />
+            <Plan />
+            <Diploma />
+            <Request />
+            <FAQ />
+            <Sending />
+            <Footer />
+        </div>
+    );
 }
 
 export default App;

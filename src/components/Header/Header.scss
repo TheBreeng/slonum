@@ -1,0 +1,370 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/variables.scss';
+@import '../../scss/fonts.scss';
+
+.Header {
+    padding-top: 0 !important;
+    position: relative;
+    margin-bottom: 100px !important;
+
+    nav {
+        @include flex;
+
+        margin: 35px 0 250px;
+
+        .logo {
+            height: 50px;
+            width: 195px;
+        }
+
+        .smallBtn {
+            animation: changeColor 1.5s 0.5s ease-in-out;
+            animation-fill-mode: forwards;
+        }
+        @keyframes changeColor {
+            to {
+                color: $mainFontColor;
+                background: $mainColor;
+            }
+        }
+    }
+
+    &__description {
+        @include flex;
+
+        .text {
+            width: 653px;
+
+            p:first-child {
+                color: $additionalFontColor;
+                text-transform: uppercase;
+                font-size: 15px;
+            }
+
+            h1 + p {
+                font-size: 18px;
+                line-height: 27px;
+            }
+
+            h1 {
+                margin: 10px 0 40px;
+            }
+
+            .participate {
+                @include flex($ai: flex-end);
+
+                .bigBtn {
+                    margin-top: 60px;
+                }
+
+                .timer {
+                    @include flex;
+
+                    position: relative;
+                    width: 265px;
+
+                    &::after {
+                        content: 'по МСК';
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        bottom: -50px;
+                        color: $additionalFontColor;
+                    }
+
+                    div {
+                        @include flex;
+
+                        position: relative;
+                        padding: 10px 15px;
+                        height: 60px;
+                        color: $additionalAccentColor;
+                        font-weight: 700;
+                        font-size: 32px;
+                        box-shadow: 0px 5px 30px rgba(215, 211, 225, 0.5);
+                        border-radius: $borderRadius;
+
+                        & > p {
+                            position: absolute;
+                            font-size: 16px;
+                            color: $mainFontColor;
+                            font-family: $headersFont;
+                            bottom: -25px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            text-transform: none;
+                        }
+                    }
+
+                    span {
+                        font-family: $headersFont;
+                        font-weight: 900;
+                        font-size: 24px;
+                        --animate-duration: 1.5s;
+                        --animate-delay: 1s;
+                    }
+                }
+            }
+        }
+
+        .images {
+            @include flex($ai: flex-end);
+
+            position: absolute;
+            top: 435px;
+            right: 212px;
+
+            .airplanes {
+                margin-right: 30px;
+            }
+
+            .girl {
+                position: relative;
+                height: 330px;
+                width: 275px;
+                background: url('../../img/header/girl.png') no-repeat;
+                background-size: 100% 100%;
+
+                .pen {
+                    position: absolute;
+                    left: 30px;
+                    bottom: 115px;
+                    z-index: -1;
+                    animation: pen 4.5s cubic-bezier(0.45, -0.67, 0.53, 1.62)
+                        infinite;
+                    animation-direction: alternate;
+                }
+
+                @keyframes pen {
+                    33% {
+                        transform: rotate(24deg);
+                    }
+                    66% {
+                        transform: rotate(66deg);
+                    }
+                    100% {
+                        transform: rotate(72deg);
+                    }
+                }
+            }
+        }
+    }
+
+    .space {
+        position: absolute;
+        width: 864px;
+        height: 693px;
+        top: -35px;
+        right: 0;
+        background: url('../../img/header/space.png') no-repeat;
+        background-size: 100% 100%;
+        z-index: -1;
+        --animate-duration: 1.5s;
+        --animate-delay: 0.5s;
+
+        img {
+            position: absolute;
+        }
+
+        .airplane {
+            right: 50px;
+            bottom: 320px;
+            animation: airplane 12s ease-in-out infinite;
+            transform: scale(50%);
+            animation-direction: alternate;
+        }
+        @keyframes airplane {
+            0% {
+                transform: rotate(0);
+            }
+            50% {
+                transform: scale(100%);
+            }
+            100% {
+                transform: scale(50%) rotate(45deg);
+            }
+        }
+
+        .alarm {
+            left: 120px;
+            top: 220px;
+            animation: alarm 12s ease-in-out infinite;
+            transform: scale(70%);
+        }
+        @keyframes alarm {
+            50% {
+                transform: scale(100%) rotate(-360deg);
+            }
+            100% {
+                transform: scale(70%) rotate(-360deg);
+            }
+        }
+
+        .atom {
+            left: 75px;
+            top: 130px;
+            animation: atom 12s cubic-bezier(0.1, 1, 1, 0.1) infinite;
+            transform: scale(0);
+        }
+        @keyframes atom {
+            50% {
+                transform: scale(100%) rotate(45deg);
+            }
+            100% {
+                transform: scale(0) rotate(90deg);
+            }
+        }
+
+        .balloon {
+            top: 300px;
+            left: 355px;
+            animation: balloon 6s ease-in-out infinite;
+            animation-direction: alternate;
+        }
+        @keyframes balloon {
+            to {
+                transform: translateY(34px);
+            }
+        }
+
+        .bigPlanet {
+            top: 80px;
+            left: 210px;
+            animation: bigPlanet 6s ease-in-out infinite;
+            animation-direction: alternate;
+        }
+        @keyframes bigPlanet {
+            to {
+                transform: translate(-50px, 20px);
+            }
+        }
+
+        .bulb {
+            right: 280px;
+            bottom: 230px;
+            animation: bulb 10.7s ease-in-out 1.3s infinite;
+            animation-direction: alternate;
+        }
+        @keyframes bulb {
+            45% {
+                transform: rotate(40deg);
+            }
+            78% {
+                transform: rotate(-45deg);
+            }
+            100% {
+                transform: rotate(-25deg);
+            }
+        }
+
+        .darkPlanet {
+            left: 330px;
+            bottom: 185px;
+            animation: darkPlanet 6s ease-in-out infinite;
+            animation-direction: alternate;
+        }
+        @keyframes darkPlanet {
+            to {
+                transform: rotate(-45deg);
+            }
+        }
+
+        .elephant {
+            right: 175px;
+            top: 225px;
+            animation: elephant 6s ease-in-out infinite;
+            animation-direction: alternate;
+        }
+        @keyframes elephant {
+            to {
+                transform: rotate(30deg) translateX(-10px);
+            }
+        }
+
+        .palette {
+            right: 70px;
+            top: 120px;
+            animation: palette 12s ease-in-out 3s infinite;
+        }
+        @keyframes palette {
+            70% {
+                transform: rotate(360deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .rocket {
+            left: 90px;
+            bottom: 200px;
+            animation: rocket 12s ease infinite;
+        }
+        @keyframes rocket {
+            67% {
+                transform: translateY(-60px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .smallPlanet {
+            top: 135px;
+            right: 405px;
+            animation: smallPlanet 6s ease-in-out 0.8s infinite;
+            animation-direction: alternate;
+        }
+        @keyframes smallPlanet {
+            to {
+                transform: translateX(30px);
+            }
+        }
+
+        .plus {
+            top: 240px;
+            right: 400px;
+            animation: plus 15s 6s ease-in-out infinite;
+            opacity: 0;
+        }
+        @keyframes plus {
+            20% {
+                transform: scale(150%);
+                opacity: 1;
+            }
+            40% {
+                transform: scale(150%);
+                opacity: 1;
+            }
+            60% {
+                transform: scale(170%);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(170%);
+                opacity: 0;
+            }
+        }
+
+        .division {
+            top: 185px;
+            right: 315px;
+            animation: division 12s ease-in-out infinite;
+            opacity: 0;
+        }
+        @keyframes division {
+            25% {
+                opacity: 1;
+                transform: scale(150%);
+            }
+            50% {
+                opacity: 0;
+                transform: scale(170%);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(170%);
+            }
+        }
+    }
+}

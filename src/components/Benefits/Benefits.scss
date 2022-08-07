@@ -1,0 +1,12 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/variables.scss';
+
+.Benefits {
+    background: url('../../img/benefits/waves.png') no-repeat;
+    background-size: 100% 100%;
+    background-position: bottom;
+
+    &__list {
+        @include flex($fw: wrap, $jc: center);
+    }
+}
